@@ -1,0 +1,5 @@
+# Introduction
+
+The [Curve Shortening Flow ](https://en.wikipedia.org/wiki/Curve-shortening_flow) is a _geometric evolution equation_ whereby a curve is deformed in the direction of its curvature vector. It is the geometric heat equation for curves in the sense that the speed is the Laplacian with respect to the arc-length parameter.
+
+Despite the initial impression, the Curve Shortening Flow is a quasi-linear parabolic equation since the arc-length parameter depends on first derivatives of the embedding. As a heat equation, it enjoys smoothing properties. It is a reaction-diffusion equation and as such there is an interplay between the diffusion and reaction terms. Perhaps the most important theorem is that for simple, closed curves in the plane, the diffusion terms dominates leading to long time convergence to a static solution; namely a circle, after rescaling. This result is known as the [Gage-Hamilton-Grayson Theorem](https://en.wikipedia.org/wiki/Curve-shortening_flow#Gage%E2%80%93Hamilton%E2%80%93Grayson_theorem).
