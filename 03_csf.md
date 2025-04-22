@@ -52,7 +52,7 @@ One of the simplest examples of a solution to the CSF is the shrinking circle:
 $$
 c(u, t) = \sqrt{r_0^2 - 2t} \> (\cos u, \sin u)
 $$
-where \(r_0\) is the radius at time \(t=0\). See [shrinking cirlce plot](#shrinking_circle).
+where \(r_0\) is the radius at time \(t=0\). See [shrinking circle plot](#shrinking_circle).
 :::
 
 ```{code-cell} ipython3
