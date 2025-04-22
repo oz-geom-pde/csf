@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+# Curve Shortening Flow
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 
@@ -34,7 +36,6 @@ import imageio.v3 as iio
 
 The Curve Shortening Flow (**CSF**) is the initial value problem
 $$
-\label{csf}
 \begin{cases}
 \partial_t c &= \vec{\kappa} = -\kappa N \\
 c(\cdot, 0) &= c_0 (\cdot)
