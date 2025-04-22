@@ -45,14 +45,14 @@ $$
 
 Let's take a look at an example.
 
-:::{prf:example}
+:::{prf:example}The Shrinking Circle
 :label: shrinking-circle
 
-**The Shrinking Circle**
-
+One of the simplest examples of a solution to the CSF is the shrinking circle:
 $$
-c(u, t) = \sqrt{1-r_0^2} (\cos u, \sin u)
+c(u, t) = \sqrt{r_0^2 - 2t} \> (\cos u, \sin u)
 $$
+where \(r_0\) is the radius at time \(t=0\). See [shrinking cirlce plot](#shrinking_circle).
 :::
 
 ```{code-cell} ipython3
