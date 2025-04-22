@@ -1,0 +1,16 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  license: CC-BY-SA-4.0
+  open_access: true
+  title: Curve Shortening Flow
+  short_title: CSF
+  description: A student project studying the Curve Shortening Flow.
+  authors:
+    - name: Paul Bryan
+      email: pabryan@gmail.com
+      url: https://pabryan.au/
+    - name: Sarah Haidar
+  github: https://github.com/oz-geom-pde/csf
+site:
+  template: book-theme
