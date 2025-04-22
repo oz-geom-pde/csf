@@ -68,8 +68,7 @@ fig.update_yaxes(scaleanchor = "x", scaleratio = 1)
 fig.update_layout(xaxis=dict(visible=False), yaxis=dict(visible=False))
 
 # Make plots transparent
-fig.update_layout(
-paper_bgcolor = 'rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+fig.update_layout(paper_bgcolor = 'rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
 
 fig
 ```
