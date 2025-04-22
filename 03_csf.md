@@ -70,6 +70,9 @@ fig.update_layout(xaxis=dict(visible=False), yaxis=dict(visible=False))
 # Make plots transparent
 fig.update_layout(paper_bgcolor = 'rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
 
+# Title
+fig.update_layout(title_text="Shrinking circle solution of CSF")
+
 fig
 ```
 
