@@ -56,6 +56,9 @@ $$
 :::
 
 ```{code-cell} ipython3
+:tags: [remove-input]
+:label: shrinking_circle
+
 t = np.linspace(0, 2*np.pi, 100)
 
 xval = np.cos(t)
