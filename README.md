@@ -35,16 +35,16 @@ myst start --execute
 You should see something like the following:
 
 
-> 📖 Built 01_introduction.md in 39 ms.
-> 📖 Built 02_curves.md in 39 ms.
-> 💾 Adding Cached Notebook Outputs (03_csf.md)
-> 📖 Built 03_csf.md in 126 ms.
-> 📖 Built 04_evolution_equations.md in 127 ms.
-> 📖 Built 05_long_time_behaviour.md in 257 ms.
-> 📖 Built 06_numerical_simulation.md in 255 ms.
-> 📖 Built README.md in 317 ms.
-> 📖 Built LICENSE.md in 265 ms.
-> 📚 Built 8 pages for project in 444 ms.
+> 📖 Built 01_introduction.md in 39 ms.<br>
+> 📖 Built 02_curves.md in 39 ms.<br>
+> 💾 Adding Cached Notebook Outputs (03_csf.md)<br>
+> 📖 Built 03_csf.md in 126 ms.<br>
+> 📖 Built 04_evolution_equations.md in 127 ms.<br>
+> 📖 Built 05_long_time_behaviour.md in 257 ms.<br>
+> 📖 Built 06_numerical_simulation.md in 255 ms.<br>
+> 📖 Built README.md in 317 ms.<br>
+> 📖 Built LICENSE.md in 265 ms.<br>
+> 📚 Built 8 pages for project in 444 ms.<br>
 >
 >
 >         ✨✨✨  Starting Book Theme  ✨✨✨
