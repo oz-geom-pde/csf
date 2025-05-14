@@ -3,9 +3,131 @@
 - Parametrisation
 - Arc-length
 - Length
+- Simple, closed curves
 - Area
 - Curvature
+- Frenet-Serret Formulae
 
+# Parametrisation
+## Definition of a Parametrised Curve
+:::{prf:definition}
+:label: parametrised-curve
+
+A parametrised curve is a pair of functions $x(t), y(t)$ that describe a curve in the $\mathbb{R}^2$ plane as:
+$$ c(t) = (x(t), y(t)) $$
+where $t \in \mathbb{R}$.
+:::
+
+## Definition of a Regular Parametrisation
+:::{prf:definition}
+:label: regular-parametrisation
+
+A curve is called a regular curve if the velocity vector $c'(t)$ is never zero:
+$$ c'(t) \neq 0 \quad \text{for all } t $$
+
+i.e. A curve is regular if c(t) is continuous.
+:::
+
+# Arc Length
+## Arc Length Parameter
+:::{prf:definition}
+:label: arc-length-parameter
+
+The arc length parameter $L$ measures the distance travelled along a curve from a fixed starting point. 
+
+Given a regular curve $c(t)$, the arc length from $t = a$ to $t$ is:
+
+$$
+L(t) = \int_a^t ||c'(u)|| \, du
+$$
+:::
+
+## Arc Length Parametrisation
+:::{prf:definition}
+:label: arc-length-parametrisation
+
+
+:::
+
+## Arc Length of a Segment
+:::{prf:definition}
+:label: arc-length-segment
+
+The arc length of a segment of a curve from $t = a$ to $t = b$ where $a,b \in \mathbb{R}$ is given by:
+
+$$
+L = \int_a^b ||c'(t)|| \, dt
+$$
+:::
+
+## Total Arc Length
+:::{prf:definition}
+:label: total-arc-length
+
+The total arc length of a curve $c(t)$ over the full interval of $c(t): t \in [a, b]$ is:
+
+$$ L = \int_a^b ||c'(t)|| \, dt $$
+
+This gives the total distance travelled along the curve from start to end.
+:::
+
+# Simple, Closed Curves
+## Definition of Simple, Closed Curves
+:::{prf:definition}
+:label: simple-closed-curve
+
+A curve $c: [a, b] \in \mathbb{R}^2$ is called a simple closed curve if:
+
+- It is smooth on $[a, b]$: $c$ is continuously differentiable on $[a, b]$
+- It starts and ends at the same point: $c(a) = c(b)$
+- It is injective on $(a, b)$: $c(t_1) \ne c(t_2)$ for all $a < t_1 < t_2 < b$
+- The endpoints match smoothly: $c'(a) = c'(b)$
+
+This means the curve traces out a loop without crossing itself, and joins up smoothly at the endpoints. 
+:::
+
+# Curvature
+## Definition of Curvature
+:::{prf:definition}
+:label: curvature-definition
+
+Let $c(t) = (x(t), y(t))$ be a regular smooth curve parametrised by arc-length $s$. The **curvature** $\kappa(s)$ at a point on the curve is defined as:
+$$ \kappa(s) = \langle \partial_s T, N \rangle $$
+
+Here:
+- $T = \partial_s c$ is the unit tangent vector.
+- $N = R_{\pi/2}$ is the unit normal vector.
+
+This gives $\kappa$ a signed value, depending on whether the curve bends to the left (positive) or right (negative).
+:::
+
+:::{prf:remark}
+:label: curvature-interpretation
+
+Curvature measures the rate at which the tangent vector turns as a particle moves along the curve. It captures how intense the "bend" of the curve is at each point:
+- If $\kappa(s) = 0$, the curve is straight.
+- As $||\kappa(s)||$ increases, a sharper curve is indicated at that particular point.
+:::
+
+## Dependence on Unit Normal
+
+:::{prf:remark}
+:label: unit-normal-dependence
+
+The curvature vector $\partial_s T$ points in the direction of the unit normal vector $N$, i.e.:
+
+$$
+\partial_s T = \kappa N
+$$
+
+However, since $N$ is a general case, and broadly defined, both $N$ and $-N$ are orthogonal to $T$, this introduces a **sign ambiguity** in the curvature.
+
+To resolve this, we've chosen the orientation of the plane so that counterclockwise is positive. From here, we defined $N = R_{\pi/2}$ so that the pair $(T, N)$ is **positively oriented** (i.e. turning from $T$ to $N$ is counter-clockwise). Therefore $\kappa$ is well-defined with a consistent sign/direction.
+:::
+
+
+
+# Frenet-Serret Formulae
 ## Product Rule
 :::{prf:lemma}
 :label: Product rule
