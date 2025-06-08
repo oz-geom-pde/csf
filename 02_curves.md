@@ -1,13 +1,5 @@
 # Curve Theory
 
-- Parametrisation
-- Arc-length
-- Length
-- Simple, closed curves
-- Area
-- Curvature
-- Frenet-Serret Formulae
-
 # Parametrisation
 ## Definition of a Parametrised Curve
 :::{prf:definition}
@@ -31,7 +23,7 @@ $$ c'(t) \neq 0 \quad \text{for all } t $$
 :::{prf:definition}
 :label: arc-length-parameter
 
-The arc length parameter $s(t)$ measures the distance travelled along a curve from a fixed starting point. 
+The arc length parameter $s(t)$ measures the distance travelled along a curve from a fixed starting point.
 
 Given a regular curve $c(t)$, the arc length from $t = a$ to $t$ is:
 
@@ -159,7 +151,7 @@ A curve $c: [a, b] \in \mathbb{R}^2$ is called a simple closed curve if:
 $$c(a) = c(b)$$
 $$c'(a) = c'(b)$$
 $$c''(a) = c''(b)$$
-This means the curve traces out a loop without crossing itself, and joins up smoothly at the endpoints. 
+This means the curve traces out a loop without crossing itself, and joins up smoothly at the endpoints.
 :::
 
 # Curvature
@@ -211,7 +203,7 @@ To resolve this, we've chosen the orientation of the plane so that counterclockw
 $$\text{If } X, Y: (a,b) \rightarrow \mathbb{R}^2 $$
 Where $X(t) = (x_1(t), x_2(t))$ and $Y(t) = (y_1(t), y_2(t))$
 $$
-\text{Then } \frac{d}{dt} \langle X(t), Y(t) \rangle = 
+\text{Then } \frac{d}{dt} \langle X(t), Y(t) \rangle =
 \langle \frac{d}{dt} X(t), Y(t) \rangle + \langle X(t), \frac{d}{dt} Y(t) \rangle
 $$
 
@@ -237,7 +229,7 @@ $$ \therefore = X' \cdot Y + X \cdot Y' \quad \blacksquare $$
 ## Orthogonality of the derivative of a constant length vector field
 
 :::{prf:lemma}
-:label: 
+:label:
 
 $$ \text{If } \|V\| \equiv \alpha $$
 $$ \text{then } \partial_S V \perp V $$
@@ -254,7 +246,7 @@ $$ = \partial_S (1) $$
 $$ = \partial_S \|V\|^2 $$
 $$ = (T \cdot T)' \quad \text{ here, } T' \text{ refers to } \partial_u T $$
 $$ = (T' \cdot T + T \cdot T') \text{  by product rule} $$
-$$ 0 = 2 (T' \cdot T) $$ 
+$$ 0 = 2 (T' \cdot T) $$
 Then we must have $T' \cdot T = 0$
 $$ \therefore \partial_S T \cdot T = \frac{1}{v} T' \cdot T = 0 \quad \blacksquare $$
 :::
