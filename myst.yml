@@ -8,7 +8,7 @@ project:
   description: A student project studying the Curve Shortening Flow.
   authors:
     - name: Paul Bryan
-      email: pabryan@gmail.com
+      email: paul@pabryan.au
       url: https://pabryan.au/
     - name: Sarah Haidar
   github: https://github.com/oz-geom-pde/csf
