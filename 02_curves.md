@@ -251,7 +251,7 @@ Then we must have $T' \cdot T = 0$
 $$ \therefore \partial_S T \cdot T = \frac{1}{v} T' \cdot T = 0 \quad \blacksquare $$
 :::
 
-## Frenet-Seret Equations
+## Frenet-Serret Equations
 :::{prf:theorem}
 :label: frenet-serret-theorem
 
@@ -297,7 +297,7 @@ $$ \text{We have } \partial_s N = \beta T
 To determine $\beta$, we differentiate $\langle T, N \rangle = 0$
 $$ 0 = \partial_s \langle T, N \rangle $$
 $$ = \langle \partial_s T, N \rangle + \langle T, \partial_s N \rangle $$
-Since $ \partial_s T = \kappa N$ by (1) and $\partial_s N = /beta T$ by (2)
+Since $ \partial_s T = \kappa N$ by (1) and $\partial_s N = \\beta T$ by (2)
 $$ 0 = \langle \kappa N, N \rangle + \langle T, \beta T \rangle $$
 $$ = \kappa \|N\|^2 + \beta\|T\|^2 $$
 $$ = \kappa + \beta \quad \text{ as } \|N\|=\|T\|=1 $$
