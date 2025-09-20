@@ -84,6 +84,6 @@ fig
 
 In a parametrisation, the CSF is the evolution equation
 $$
-\partial_t (x, y) = d
+\partial_t (x, y) = \dots
 $$
 :::
