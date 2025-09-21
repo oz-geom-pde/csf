@@ -1,0 +1,9 @@
+# Jupyter
+jupyterlab
+
+# Python libs
+numpy
+sympy
+pandas
+plotly
+imageio
