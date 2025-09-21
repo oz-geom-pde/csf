@@ -1,3 +1,5 @@
+# Python cache
 .ipynb_checkpoints/
+__pycache__/
 # MyST build outputs
 _build
