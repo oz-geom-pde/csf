@@ -35,6 +35,13 @@ jobs:
           node-version: 18.x
       - name: Install MyST Markdown
         run: npm install -g mystmd
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install Python libs
+        run: pip install -r requirements.txt
       - name: Build HTML Assets
         run: myst build --html --execute
       - name: Upload artifact
