@@ -145,7 +145,7 @@ $$
 
 A curve $c: [a, b] \in \mathbb{R}^2$ is called a simple closed curve if:
 
-- It is smooth on $[a, b]$: $c$ is twice continuously differentiable on $[a, b]
+- It is smooth on $[a, b]$: $c$ is twice continuously differentiable on $[a, b]$
 - It is injective on $(a, b)$: $c(t_1) \ne c(t_2)$ for all $a < t_1 < t_2 < b$
 - The endpoints match smoothly:
 $$c(a) = c(b)$$
