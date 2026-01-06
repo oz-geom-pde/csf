@@ -130,7 +130,7 @@ In other words, it is not necessary to require that the solution of the curve sh
 :icon: false
 Let $\gamma_0 : I \rightarrow \mathbb{R}^2$ be a regular parametrized curve and let $\gamma :  \left[ 0, T \right > \times I \rightarrow \mathbb{R}^2$ be a smooth family of parametrized curves such that $\gamma(0, \cdot) = \gamma_0$ and that satisfies
 \begin{equation*}
-\langle \frac{\partial \gamma}{\partial t}, N \rangle = -\kappa.
+\left \langle \frac{\partial \gamma}{\partial t}, N \right \rangle = -\kappa.
 \end{equation*}
 Then, such a family can locally be reparametrized to a curve shortening flow. If $I$ is compact, such a reparametrization can be achieved globally.
 :::
