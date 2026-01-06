@@ -96,11 +96,13 @@ Then $\tilde{\gamma}(t,v) \coloneqq \gamma(t,\varphi(v))$ is the curve shortenin
 :numbered:false
 By direct computation, we have:
 \begin{equation*}
+\begin{split}
 \frac{\partial \tilde{\gamma}}{\partial t}(t,v) &= \frac{\partial}{\partial t} (\gamma(t,\varphi(v))) \\
 &=  D \gamma(t,\varphi(v)) \cdot \begin{bmatrix}1 \\ 0 \end{bmatrix} \\
 &= \frac{\partial \gamma}{\partial t}(t,u) \\
 &= - \kappa(t,u) N(t,u) \\
 &= - \kappa(t, \varphi(v)) N(t, \varphi(v)).
+\end{split}
 \end{equation*}
 Since $\tilde{\gamma}(0,v) = \gamma(0,\varphi(v)) = \gamma_0(\varphi(v)) = (\gamma_0 \circ \varphi)(v)$, we see that $\tilde{\gamma}$ is the curve shortening flow of $\gamma_0 \circ \varphi.$
 :::
