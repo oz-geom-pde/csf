@@ -272,7 +272,7 @@ In particular, the matrix of a parabolic system is positive definite.
 
 :::{prf:remark}
 :numbered: false
-- An obvious example of a parabolic equation is the *heat equation*.
+- An example of a parabolic equation is the *heat equation*.
 - General second-order parabolic equations describe diffusion processes. In what follows, we will see that the curve shortening flow describes diffusion of curvature.
 :::
 
