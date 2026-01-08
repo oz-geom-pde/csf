@@ -6,4 +6,4 @@ This project is a student project for exploring the Curve Shortening Flow (CSF).
 
 - Sarah Haidar, 2025
 
-See [CONTRIBUTING](Contributing) for information about how to get involved.
+See [CONTRIBUTING](CONTRIBUTING.md) for information about how to get involved.
