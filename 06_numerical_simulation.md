@@ -53,6 +53,7 @@ u_t(t,x) = \frac{u(t,x) - u(t-dt,x)}{dt}.
 \end{equation*}
 Analogous computations as before yield the following discretization of the heat equation:
 \begin{equation*}
+\label{BWD}
 u(t-dt,x) = - \alpha \cdot u(t,x-dx) + (1+2\alpha) \cdot u(t,x) - \alpha \cdot u(t,x+dx),
 \end{equation*}
 where again $\displaystyle \alpha \coloneqq \frac{dt}{dx^2}$.
@@ -60,6 +61,72 @@ where again $\displaystyle \alpha \coloneqq \frac{dt}{dx^2}$.
 This approach of discretization is called **<span style = "color: blue"> backward Euler method</span>.** Note that in the equation above the values $u(t,x-dx), u(t,x)$ and $u(t,x+dx)$ are unknown to us, so using the backward Euler method is not so straight-forward since it boils to solving a system of linear equations.
 
 Although using the backward Euler method is not as direct as using the forward method, it is numerical more stable between the two so we will use the backward method for the discretization.
+
+### Pseudo-algorithm for the backward Euler method
+Now we want to see how to explicitly use the backward Euler method in order to compute the values of the solution $u(t, \cdot)$ at time $t$ given the values $u(t-dt, \cdot)$ at time $t-dt$.
+
+For simplicity, assume that the space paramter $x$ of the heat equation belongs to the segment $[0,1]$ and assume that our solution is $1$-periodic, i.e. that $u(t,x+1) = u(t,x)$. Consider the subdivision of the segment $[0,1]$ given by the points
+\begin{equation*}
+\left \{0, \frac{1}{N}, \frac{2}{N}, \dots, \frac{N-1}{N}, 1 \right \},
+\end{equation*}
+where $N \in \mathbb{N}$ is some natural number that corresponds to the number of points used to discretize the space parameter. [The backward Euler method](#BWD) tells us that in order to compute $u(t,\cdot)$ given $u(t-dt, \cdot)$, we need to solve the following system of linear equations:
+\begin{equation*}
+\begin{bmatrix} 
+1+2\alpha & -\alpha & 0 & 0 & \dots & 0 & - \alpha \\
+-\alpha & 1+2\alpha & -\alpha & 0 & \dots & 0 & 0 \\
+0 & -\alpha & 1+2\alpha & - \alpha & \dots & 0 & 0 \\
+\vdots & \vdots & \vdots & \vdots & \dots & \vdots & \vdots \\
+-\alpha & 0 & 0 & 0 & \dots & -\alpha & 1+2\alpha
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+u(t,0) \\ u(t,\frac{1}{N}) \\ u(t,\frac{2}{N}) \\ \vdots \\ u(t, \frac{N-1}{N})
+\end{bmatrix} =
+\begin{bmatrix}
+u(t-dt,0) \\ u(t-dt,\frac{1}{N}) \\ u(t-dt,\frac{2}{N}) \\ \vdots \\ u(t-dt, \frac{N-1}{N})
+\end{bmatrix}
+\end{equation*}
+Now, let
+\begin{equation*}
+\begin{split}
+E &= \begin{bmatrix}
+2 & -1 & 0 & 0 & \dots & 0 & -1 \\
+-1 & 2 & -1 & 0 & \dots & 0 & 0 \\
+0 & -1 & 2 & -1 & \dots & 0 & 0 \\
+\vdots & \vdots & \vdots & \vdots & \dots & \vdots & \vdots \\
+-1 & 0 & 0 & 0 & \dots & -1 & 2 
+\end{bmatrix} \\
+A&= I + \alpha \cdot E \\
+U(t) &= \begin{bmatrix} u(t,0) \\ u(t, \frac{1}{N}) \\ u(t, \frac{2}{N}) \\ \vdots \\ u(t, \frac{N-1}{N}) \end{bmatrix}
+\end{split}
+\end{equation*}
+Using this notation, the system above can be written as
+\begin{equation*}
+\begin{split}
+A &\cdot U(t) = U(t-dt) \\
+\implies U(t) &= A^{-1} \cdot U(t-dt).
+\end{split}
+\end{equation*}
+
+This gives us the following pseudo-code on how to discretize the heat equation using the backward Euler method:
+
+:::{note} ⚙️ The backward Euler method algorithm
+:icon: false
+**Inputs:**
+- number of space parameters $\dots N$
+- time step $\dots dt$
+- initial condition $\dots u(0,x)$
+
+**Output:**
+
+1. Compute $\displaystyle dx = \frac{1}{N}$
+2. Compute the matrix $A \in M_n(\mathbb{R})$
+3. Initialize the time to $t = 0$ and set $U = u(x,0)$
+4. **Repeat**:
+
+    - compute the solution at the time $t+dt$ by calculating $A^{-1} \cdot U$
+    - update the time $t + dt$
+:::
 
 ## Discretization of the curve shortening flow
 
