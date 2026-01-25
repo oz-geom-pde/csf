@@ -11,6 +11,9 @@ project:
       email: paul@pabryan.au
       url: https://pabryan.au/
     - name: Sarah Haidar
+    - name: Ivan Krznarić
+      email: ikrznaric@efzg.hr
+      url: https://www.efzg.unizg.hr/ikrznaric
   github: https://github.com/oz-geom-pde/csf
 site:
   template: book-theme

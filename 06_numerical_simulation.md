@@ -492,7 +492,7 @@ Running [the code above](#csf-circle) we get the following animation:
 Running the code above produces the animation of the curve shortening flow of the circle with center $(0,0)$ and radius equal to $2$.
 :::
 
-In the code above, you can use any initial curve that you like to produce all kinds of animations. Below we showcase two such possible examples.
+In the code above, you can use any initial curve that you'd like to produce all kinds of animations. Below we showcase two such possible examples.
 
 :::{figure} ./video/csf-pi.mp4
 The Gage-Hamilton-Graysong Theorem in full effect - under the curve shortening flow, a curve that is not initially convex becomes convex and then shrinks to a point in finite time.
