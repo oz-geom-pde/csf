@@ -5,5 +5,6 @@ This project is a student project for exploring the Curve Shortening Flow (CSF).
 ## List of Contributors
 
 - Sarah Haidar, 2025
+- Ivan Krznarić, 2025
 
 See [CONTRIBUTING](CONTRIBUTING.md) for information about how to get involved.
