@@ -487,3 +487,9 @@ plt.show()
 ````
 
 Running [the code above](#csf-circle) we get the following animation:
+
+:::{figure} ./video/circle.mp4
+Running the code above produces the animation of the curve shortening flow of the circle with center $(0,0)$ and radius equal to $2$.
+:::
+
+In the code above, you can use any initial curve that you like to produce all kinds of animations. Below we showcase two such possible examples.
