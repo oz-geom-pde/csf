@@ -493,3 +493,11 @@ Running the code above produces the animation of the curve shortening flow of th
 :::
 
 In the code above, you can use any initial curve that you like to produce all kinds of animations. Below we showcase two such possible examples.
+
+:::{figure} ./video/csf-pi.mp4
+The Gage-Hamilton-Graysong Theorem in full effect - under the curve shortening flow, a curve that is not initially convex becomes convex and then shrinks to a point in finite time.
+:::
+
+:::{figure} ./video/csf-ying-yang.mp4
+This animation also illustrates a non-trivial fact about the curve shortening flow: if the initial curve is embedded, then the solution $\gamma(t, \cdot)$ is also embedded at all times $t$, meaning that there are no self-intersections during the evolution. In other words, the singularities can only occur when the curve shrinks to a point.
+:::
