@@ -121,7 +121,7 @@ This gives us the following pseudo-code on how to discretize the heat equation u
 
 1. Compute $\displaystyle dx = \frac{1}{N}$
 2. Compute the matrix $A \in M_n(\mathbb{R})$
-3. Initialize the time to $t = 0$ and set $U = u(x,0)$
+3. Initialize the time to $t = 0$ and set $U = u(0,x)$
 4. **Repeat**:
 
     - compute the solution at the time $t+dt$ by calculating $A^{-1} \cdot U$
@@ -142,8 +142,59 @@ Due to the invariance of the curve shortening flow under tangential perturbation
 \begin{equation*}
 \frac{\partial \gamma}{\partial t} = \frac{\gamma_{uu}}{\lvert \gamma_u \rvert^2}.
 \end{equation*}
-This is the equation that we are going to discretize. 
+This is the equation that we are going to discretize, and we are going to do so using the [backward Euler method](#BWD).
 
+Discretization of the time-derivative and second space-derivative are given as before:
 
+\begin{equation*}
+\begin{split}
+\frac{\partial \gamma}{\partial t} &= \frac{\gamma(t,u) - \gamma(t-dt, u)}{dt} \\
+\gamma_{uu}(t,u) &= \frac{\gamma(t,u+du) - 2\gamma(t,u) + \gamma(t, u-du)}{du^2}
+\end{split}
+\end{equation*}
+
+In order to discretize the norm $\lvert \gamma_u \rvert^2$, we have made the following choice:
+
+\begin{equation*}
+\lvert \gamma_u (t,u) \rvert^2 = \frac{\lvert \gamma(t-dt,u+du) - \gamma(t-dt,u) \rvert^2 + \lvert \gamma(t-dt,u) - \gamma(t-dt,u-du)\rvert^2}{2du^2}.
+\end{equation*}
+
+Now the discretized equation for the curve shortening flow is given by 
+
+\begin{equation*}
+\label{CSF-discrete}
+\frac{\gamma(t,u) - \gamma(t-dt,u)}{dt} = 2 \cdot \frac{\gamma(t,u+du) - 2\gamma(t,u) + \gamma(t, u-du)}{\lvert \gamma(t-dt,u+du) - \gamma(t-dt,u) \rvert^2 + \lvert \gamma(t-dt,u) - \gamma(t-dt,u-du)\rvert^2}.
+\end{equation*}
+
+If we define
+
+\begin{equation*}
+\alpha \coloneqq \frac{2\cdot dt}{\lvert \gamma(t-dt,u+du) - \gamma(t-dt,u) \rvert^2 + \lvert \gamma(t-dt,u) - \gamma(t-dt,u-du)\rvert^2},
+\end{equation*}
+
+then we get a system of linear equations that is analogous to the one for the heat equation:
+
+\begin{equation*}
+-\alpha \cdot \gamma(t,u-du) + (1+2\alpha) \cdot \gamma(t,u) - \alpha \cdot \gamma(t, u + du) = \gamma(t-dt, u).
+\end{equation*}
+Hence, we can use the same pseudo-algorithm to find its solution:
+
+:::{note} ⚙️ The backward Euler method algorithm for the curve shortening flow
+:icon: false
+**Inputs:**
+- number of space parameters $\dots N$
+- time step $\dots dt$
+- initial condition $\dots \gamma_0(u)$
+
+**Output:**
+
+1. Compute $\displaystyle du = \frac{1}{N}$
+2. Compute the matrix $A \in M_n(\mathbb{R})$
+3. Initialize the time to $t = 0$ and set $\gamma = \gamma(0,u)$
+4. **Repeat**:
+
+    - compute the solution at the time $t+dt$ by calculating $A^{-1} \cdot \gamma$
+    - update the time $t + dt$
+:::
 
 ## Implementation in Python
