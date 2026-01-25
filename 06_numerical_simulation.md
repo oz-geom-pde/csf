@@ -130,4 +130,20 @@ This gives us the following pseudo-code on how to discretize the heat equation u
 
 ## Discretization of the curve shortening flow
 
+In this section we are going to discretize the curve shortening flow. Let $\gamma_0 : I \rightarrow \mathbb{R}^2$ be a regular parametrized curve and let $\gamma(t,u)$ be its curve shortening flow, where $u$ is a general parameter. The curve shortening flow then boils down to the following equation:
+\begin{equation*}
+\frac{\partial \gamma}{\partial t} = \frac{1}{\lvert \gamma' \rvert} \cdot \frac{\partial}{\partial u} \left(\frac{1}{\lvert \gamma'\rvert} \frac{\partial \gamma}{\partial u}\right).
+\end{equation*}
+Explicitly computing the derivate, we get that the curve shortening flow equation is 
+\begin{equation*}
+\frac{\partial \gamma}{\partial t} = \frac{\gamma_{uu}}{\lvert \gamma_u \rvert^2} - \frac{\langle \gamma_u, \gamma_{uu} \rangle}{\lvert \gamma_u \rvert^4}\gamma_u.
+\end{equation*}
+Due to the invariance of the curve shortening flow under tangential perturbations, the curve shortening flow is equivalent to the equation
+\begin{equation*}
+\frac{\partial \gamma}{\partial t} = \frac{\gamma_{uu}}{\lvert \gamma_u \rvert^2}.
+\end{equation*}
+This is the equation that we are going to discretize. 
+
+
+
 ## Implementation in Python
