@@ -1,6 +1,6 @@
 # Numerical Simulation
 
-*This entire chapter is dedicated to Sigurd Angenent, who was kind enough to share his notes and the original code with one of the contributors of this project years ago. Most of the contents of this chapter are directly based on those materials, for which we are deeply thankful.*
+*This entire chapter is dedicated to Sigurd Angenent, who has kindly shared his notes and the original code with one of the contributors of this project years ago. Most of the contents of this chapter are directly based on those materials, for which we are deeply thankful.*
 
 ## Discretization of the 1-dimensional heat equation
 Consider $1$-dimensional heat equation given by
